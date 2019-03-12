@@ -20,22 +20,8 @@ type Address implements Node {
 
 type AddressCreate {
   errors: [Error!]
+  user: User
   address: Address
-}
-
-input AddressCreateInput {
-  firstName: String
-  lastName: String
-  companyName: String
-  streetAddress1: String
-  streetAddress2: String
-  city: String
-  cityArea: String
-  postalCode: String
-  country: String!
-  countryArea: String
-  phone: String
-  userId: ID!
 }
 
 type AddressDelete {
@@ -1057,7 +1043,7 @@ type Mutations {
   staffCreate(input: StaffCreateInput!): StaffCreate
   staffDelete(id: ID!): StaffDelete
   staffUpdate(id: ID!, input: StaffInput!): StaffUpdate
-  addressCreate(input: AddressCreateInput!): AddressCreate
+  addressCreate(input: AddressInput!, userId: ID!): AddressCreate
   addressDelete(id: ID!): AddressDelete
   addressUpdate(id: ID!, input: AddressInput!): AddressUpdate
   addressSetDefault(addressId: ID!, type: AddressTypeEnum!, userId: ID!): AddressSetDefault
