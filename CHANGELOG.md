@@ -4,6 +4,7 @@ All notable, unreleased changes to this project will be documented in this file.
 
 ## [Unreleased]
 - Update typescript types after apollo is upgraded - #3823 by @jxltom
+- Add address book view - #3826 by @dominik-zeglen
 
 
 ## 2.4.0
