@@ -26,6 +26,7 @@ type AddressCreate {
 
 type AddressDelete {
   errors: [Error!]
+  user: User
   address: Address
 }
 
